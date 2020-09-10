@@ -7,4 +7,5 @@
     <color name="background">#252525</color>
     <color name="darkPink">#EA5C8C</color>
     <color name="softPink">#FFC1C7</color>
+    <color name="chatBg">#404040</color>
 </resources>
