@@ -4,51 +4,76 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/welcome"
+    android:background="@drawable/bg_welcome"
     tools:context=".WelcomeActivity">
 
+
+    <ImageView
+        android:id="@+id/person_icon"
+        android:layout_width="280dp"
+        android:layout_height="428dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="51dp"
+        android:contentDescription="@string/content_description"
+        android:src="@drawable/walk_person"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="188dp"
+        android:layout_marginTop="8dp"
         android:text="@string/textWelcome"
         android:textColor="@android:color/white"
-        android:textSize="36sp"
-        android:textStyle="bold"
+        android:textSize="25sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/person_icon" />
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tv_keterangan"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="75dp"
-        android:layout_marginRight="15dp"
-        android:backgroundTint="#00BCD4"
-        android:text="@string/txt_register"
-        android:textColor="#FFFFFF"
-        app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
-        app:layout_constraintHorizontal_bias="0.517"
-        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        android:text="@string/welcome_txt"
+        android:textSize="10sp"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_welcome" />
 
     <Button
-        android:id="@+id/btn_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:id="@+id/btn_register"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
         android:layout_marginLeft="15dp"
-        android:layout_marginTop="26dp"
+        android:layout_marginTop="35dp"
         android:layout_marginRight="15dp"
-        android:backgroundTint="#00BCD4"
+        android:background="@drawable/btn_sign_up"
+        android:text="@string/txt_register"
+        android:textColor="@color/darkPink"
+        android:textSize="11sp"
+        app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
+        app:layout_constraintHorizontal_bias="0.517"
+        app:layout_constraintStart_toStartOf="@+id/tv_welcome"
+        app:layout_constraintTop_toBottomOf="@+id/tv_keterangan" />
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginRight="15dp"
+        android:background="@drawable/btn_sign_in"
         android:text="@string/txt_login"
         android:textColor="#FFFFFF"
+        android:textSize="11sp"
         app:layout_constraintEnd_toEndOf="@+id/tv_welcome"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="@+id/tv_welcome"
         app:layout_constraintTop_toBottomOf="@+id/btn_register" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

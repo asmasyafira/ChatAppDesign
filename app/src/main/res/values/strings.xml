@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">ChatApp</string>
-    <string name="textWelcome">Welcome</string>
-    <string name="txt_register">Register</string>
-    <string name="txt_login">Login</string>
+    <string name="textWelcome">Welcome to Chat.u</string>
+    <string name="txt_register">Sign Up</string>
+    <string name="txt_login">Sign In</string>
     <string name="txt_username">Username</string>
     <string name="txt_name">Name</string>
     <string name="txt_password">Password</string>
@@ -27,4 +27,8 @@
     <string name="text_delete">Deleted</string>
     <string name="failed">Failed, Not Deleted</string>
     <string name="message_notif">Write your message first!</string>
+    <string name="welcome_txt">Sign in or Sign up to continue</string>
+    <string name="create_account">Create Account</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
 </resources>

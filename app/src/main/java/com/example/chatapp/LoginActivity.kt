@@ -3,6 +3,7 @@ package com.example.chatapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
@@ -18,14 +19,20 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        setSupportActionBar(toolbar_login)
-        supportActionBar!!.title = "Login"
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+//        setSupportActionBar(toolbar_login)
+//        supportActionBar!!.title = "Login"
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         mAuth = FirebaseAuth.getInstance()
 
-        toolbar_login.setNavigationOnClickListener {
+        toolbar_login.setOnClickListener {
             val intent = Intent(this, WelcomeActivity::class.java)
             startActivity(intent)
+            finish()
+        }
+
+        tv_to_sign_up_1.setOnClickListener {
+            val intentToSignUp = Intent(this, RegisterActivity::class.java)
+            startActivity(intentToSignUp)
             finish()
         }
 
@@ -56,5 +63,13 @@ class LoginActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

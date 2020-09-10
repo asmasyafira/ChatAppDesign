@@ -3,6 +3,7 @@ package com.example.chatapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.DatabaseReference
@@ -25,12 +26,18 @@ class RegisterActivity : AppCompatActivity() {
 
         mAuth = FirebaseAuth.getInstance()
 
-        setSupportActionBar(toolbar_register)
-        supportActionBar!!.title = getString(R.string.txt_register)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        toolbar_register.setNavigationOnClickListener {
+//        setSupportActionBar(toolbar_register)
+//        supportActionBar!!.title = getString(R.string.txt_register)
+//        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
+        toolbar_register.setOnClickListener {
             val intentToWelcome = Intent(this, WelcomeActivity::class.java)
             startActivity(intentToWelcome)
+            finish()
+        }
+
+        tv_to_sign_in.setOnClickListener {
+            val intentToSignIn = Intent(this, LoginActivity::class.java)
+            startActivity(intentToSignIn)
             finish()
         }
 
@@ -91,5 +98,13 @@ class RegisterActivity : AppCompatActivity() {
                 }
             }
         }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId == android.R.id.home) {
+            finish()
+            return true
+        }
+        return super.onOptionsItemSelected(item)
     }
 }
